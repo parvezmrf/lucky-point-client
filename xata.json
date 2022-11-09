@@ -1,0 +1,56 @@
+[
+    {
+        "package_id": 1,
+        "title": "MIND GAMES Here's how the 333 rule could be key to calming your anxiety",
+        "description": "It's a general feeling of unease or worry, which many will be able to relate to due to current concerns around the cost of living crisis. Millions of people suffer with the condition in the UK and in extreme cases, it can cause panic attacks.In order to avoid it escalating to this, many people will practise cognitive behavioural skills. One of the more informal skills of this type of method is the 333 technique. Experts say this is an easy skill you can remember and one you can also use in the moment if something has triggered your feelings of unease. ",
+        "duration": "3",
+        "rating": "4.7",
+        "price": "260",
+        "img": "https://www.thesun.ie/wp-content/uploads/sites/3/2022/09/no-escaping-gravity-759030635-2.jpg?w=620"
+    },
+    {
+        "package_id": 2,
+        "title": "TAKING A TOLL Take our quiz to see how stressed you are and five top tips to avoid worries",
+        "description": " Even before the pandemic, 74 per cent felt overwhelmed or unable to cope, according to the Mental Health Foundation.  And experts fear this may have got worse. Stress is the bodys reaction to feeling threatened and has been humans survival response since caveman days. But living with it every day over a long period of time can take a toll on physical and mental health.Chartered psychologist Professor Gail Kinman explained: “One of the best ways to describe stress is when the demand on you exceeds your ability to cope — from professional life, personal life or both.",
+        "duration": "2",
+        "rating": "4.8",
+        "price": "250",
+        "img": "https://www.thesun.co.uk/wp-content/uploads/2022/10/young-businessman-working-late-office-771037429.jpg?w=620"
+    },
+    {
+        "package_id": 3,
+        "title": "MAN ALIVE! Im a hair transplant surgeon and here's why randy blokes could risk losing their hair",
+        "description": "A HAIR transplant surgeon has claimed the most randy blokes are most likely to lose their hair.The award-winning hair transplant clinic Juvida, in Yorkshire, explained that vitamin A deficiency is linked with hair loss. Given vitamin A is found in semen, Dr Ahmad suggested ejaculatig too much could hypothetically cause a depletion in the body, and negatively impact the hairline. There hasn't been scientific studies to link masturabation with hair loss as of yet. ",
+        "duration": "1",
+        "rating": "4.8",
+        "price": "350",
+        "img": "https://www.thesun.ie/wp-content/uploads/sites/3/2022/05/NINTCHDBPICT000442165669.jpg?w=620"
+    },
+    {
+        "package_id": 4,
+        "title": "LEG UP How your LEG pain could actually be a sign of common cancer in young people",
+        "description": "LEG pain is common and in most cases, it's usually harmless. But for some people - it could be a warning sign of a common cancer.Every year in the UK there are around 2,400 new cases of testicular cancer and it's the 17th most common form of the illness. While the NHS says it's a 'relatively rare cancer', it's most common in young men - affecting those between the ages of 15 and 49. Medics say that around one in 250 males will develop the disease at some point in their lifetime, with the rate of illness increasing.",
+        "duration": "1.5",
+        "rating": "4.6",
+        "price": "450",
+        "img": "https://www.thesun.co.uk/wp-content/uploads/2022/08/NINTCHDBPICT000752345262.jpg?w=620"
+    },
+    {
+        "package_id": 5,
+        "title": "DRUG DEAL Major change to the way women receive vital medication - are you affected?",
+        "description": "TRYING to get hold of emergency contraception can be a bit of a logistical nightmare - especially given it's time sensitive. There is also the risk of feeling judged when buying the medication, which can put women off.But now, some women are able to order the morning-after pill to their door for free, without having to see or even speak to a healthcare professional. The new service - launched by the femtech startup, The Lowdown - will mean women who need the time-sensitive pill will receive it within hours of placing an order online. ",
+        "duration": "4",
+        "rating": "4.9",
+        "price": "550",
+        "img": "https://www.thesun.co.uk/wp-content/uploads/2020/04/NINTCHDBPICT000476738938.jpg?w=620"
+    },
+    {
+        "package_id": 6,
+        "title": "HEALTHY HOBBY Scientists reveal mood-boosting hobby which can stave off depression and it costs nothing",
+        "description": "BIRD-watching boosts your mental health, a study has found. Just seeing or hearing a single feathered friend lifts the mood for up to eight hours. The finding adds to evidence of how getting close to nature by exploring the countryside or interacting with animals can stave off depression. Researcher Ryan Hammoud, from King's College London, said: “We have for the first time shown the direct link between seeing or hearing birds and positive mood. “We hope this can demonstrate the importance of protecting and providing environments to encourage birds.” The researchers used data collected from 1,300 people in the UK, US and Europe over three and a half years.",
+        "duration": "2.5",
+        "rating": "4.8",
+        "price": "650",
+        "img": "https://www.thesun.co.uk/wp-content/uploads/2022/10/vivacious-young-woman-laughing-good-771098182.jpg?w=620"
+    }
+]

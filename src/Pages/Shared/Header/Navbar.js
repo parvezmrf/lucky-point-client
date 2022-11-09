@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { FaUserCircle } from 'react-icons/fa';
+import { FiLogOut } from 'react-icons/fi';
 
 
 const Navbar = () => {
@@ -45,7 +46,7 @@ const Navbar = () => {
                                 }
 
                             </li>
-                            <li className='max-md:p-0'><Link onClick={logOutUser} >  LogOut</Link> </li>
+                            <li className='max-md:p-0'><Link onClick={logOutUser} ><FiLogOut></FiLogOut></Link> </li>
 
                         </> :
                             <><li className='px-1 max-md:p-0 ' > <Link to='/login'>Login</Link> </li>

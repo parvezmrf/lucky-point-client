@@ -38,9 +38,9 @@ const Navbar = () => {
 
                     {
                         user?.uid ? <>
-                            <li className='max-md:p-0 text-3xl ' >
+                            <li className='max-md:p-0 text-4xl ' >
                                 {
-                                    user?.photoURL ? <Link><img className='h-8' src={user.photoURL} alt="" srcSet="" /> </Link> :
+                                    user?.photoURL ? <Link><img className='h-8 rounded-full' src={user.photoURL} alt="" srcSet="" /> </Link> :
                                         <Link><FaUserCircle></FaUserCircle>  </Link>
                                 }
 

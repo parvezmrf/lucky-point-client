@@ -4,6 +4,8 @@ const ServiceSigngle = ({ servicelist }) => {
 
     const { title, img, description, duration, rating, price } = servicelist;
 
+
+
     return (
 
         <div className="card lg:card-side bg-base-100 drop-shadow-xl m-5 p-5 ">

@@ -6,7 +6,7 @@ const Services = () => {
 
 
     useEffect(() => {
-        fetch('xata.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -21,8 +21,8 @@ const Services = () => {
     }
 
     return (
-        <div className='text-center'>
-            <div className='py-10' >
+        <div >
+            <div className='py-10 text-center' >
                 <h2 className="text-4xl font-semibold text-primary ">Our Service</h2>
                 <hr />
             </div>
@@ -32,8 +32,10 @@ const Services = () => {
                     servicelist={servicelist}
                 ></ServiceSigngle>)
             }
+            <div className='py-5 text-center'>
 
-            <button className="btn btn-outline btn-secondary" onClick={() => showMore(20)} >Show More</button>
+                <button className="btn btn-outline btn-secondary" onClick={() => showMore(20)} >Show More</button>
+            </div>
 
         </div>
     );

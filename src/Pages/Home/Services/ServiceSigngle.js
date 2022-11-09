@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const ServiceSigngle = ({ servicelist }) => {
 
-    const { title, img, description, duration, rating, price } = servicelist;
+    const { _id, title, img, description, duration, rating, price } = servicelist;
 
 
 
@@ -19,7 +21,9 @@ const ServiceSigngle = ({ servicelist }) => {
                     <p>Price: ${price}</p>
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Admit</button>
+                    <Link to={`/servicedetils/${_id}`} >
+                        <button className="btn btn-primary">Admit</button>
+                    </Link>
                 </div>
             </div>
         </div>

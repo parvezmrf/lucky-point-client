@@ -4,9 +4,24 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 const SingleReview = ({ review }) => {
 
     const { user } = useContext(AuthContext)
+    const { _id } = review;
+
+    const reviewDelete = id => {
+        const procced = window.confirm('Want to sure delete?');
+        if (procced) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
+        }
+    }
 
     return (
         <div>
+
 
             <div className="card lg:card-side bg-base-200 shadow-xl">
                 <figure className='w-32' ><img src={user?.photoURL} alt="" /></figure>
@@ -21,8 +36,8 @@ const SingleReview = ({ review }) => {
                     </div>
 
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Edit</button>
-                        <button className="btn btn-primary">Delete</button>
+                        <button className="btn btn-ghost">Edit</button>
+                        <button onClick={() => reviewDelete(_id)} className="btn btn-ghost">Delete</button>
                     </div>
                 </div>
             </div>

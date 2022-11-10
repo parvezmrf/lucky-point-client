@@ -1,23 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
-const SingleReview = ({ review }) => {
+const SingleReview = ({ review, reviewDelete }) => {
 
     const { user } = useContext(AuthContext)
     const { _id } = review;
 
-    const reviewDelete = id => {
-        const procced = window.confirm('Want to sure delete?');
-        if (procced) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                })
-        }
-    }
+
+
 
     return (
         <div>

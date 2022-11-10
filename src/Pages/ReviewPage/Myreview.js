@@ -13,6 +13,24 @@ const Myreview = () => {
                 .then(data => setReviews(data)))
     }, [user?.email])
 
+    const reviewDelete = id => {
+        const procced = window.confirm('Want to sure delete?');
+        if (procced) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('delete operation succed!')
+                        const rest = reviews.filter(review => review._id !== id);
+                        setReviews(rest)
+                    }
+                })
+        }
+    }
+
     console.log(reviews)
 
     return (
@@ -36,6 +54,7 @@ const Myreview = () => {
                     reviews.map(review => <SingleReview
                         key={review._id}
                         review={review}
+                        reviewDelete={reviewDelete}
                     ></SingleReview>)
                 }
             </div>

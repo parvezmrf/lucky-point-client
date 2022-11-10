@@ -5,7 +5,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const ServiceDetails = () => {
 
-    const { _id, title } = useLoaderData();
+    const { _id, title, img, description, duration, rating, price } = useLoaderData();
     const { user } = useContext(AuthContext);
 
     const handleReview = event => {
@@ -51,7 +51,27 @@ const ServiceDetails = () => {
 
     return (
         <div>
-            {title}
+            <>
+
+
+                <div className="card card-compact w-3/4 mx-auto bg-base-100 shadow-xl my-20">
+
+                    <div className="card-body">
+                        <h2 className="card-title text-3xl">{title}</h2>
+                        <img src={img} alt="Shoes" />
+                        <p className='text-xl' >{description}</p>
+                        <p className='text-2xl my-3' >Treatment time: <strong>{duration} Months</strong> </p>
+                        <p className='text-2xl my-3' >Customer Rating: <strong>{rating} </strong> out of 5 </p>
+                        <p className='text-2xl my-3' >Price: <strong>${price} </strong>/Month</p>
+
+                        <div className="card-actions justify-end">
+                            <button className="btn btn-primary">Admit Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </>
 
 
 

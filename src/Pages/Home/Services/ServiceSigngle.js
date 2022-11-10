@@ -6,7 +6,7 @@ const ServiceSigngle = ({ servicelist }) => {
 
     const { _id, title, img, description, duration, rating, price } = servicelist;
 
-
+    console.log(servicelist)
 
     return (
 

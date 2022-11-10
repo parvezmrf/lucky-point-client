@@ -18,12 +18,24 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0 max-md:block md:flex font-medium ">
 
                     <li className='px-2 ' > <Link to='/' className='px-4 max-md:px-5 border' >Home </Link> </li>
-                    <li className='px-2 ' > <Link to='/allservices' className='px-4 max-md:px-5 border'  >Service</Link> </li>
-                    <li className='px-2 ' > <Link to='/' className='px-4 max-md:px-5 border'   >Add Service</Link> </li>
+                    <li className='px-2 ' > <Link to='/allservices' className='px-4 max-md:px-5 border'  >All Service</Link> </li>
+
+
+                    {
+                        user?.uid ? <li className='px-2 ' > <Link to='/' className='px-4 max-md:px-5 border'   >Add Service</Link> </li> : ''
+                    }
+                    {
+                        user?.uid ? <li className='px-2 ' > <Link to='/myreview' className='px-4 max-md:px-5 border'   >My Review</Link> </li> : ''
+                    }
+
+
+                    <li className='px-2  ' > <Link to='/' className='px-4 max-md:px-5 text-white border-0 bg-[#f88a6c]' >Emergency Admit</Link> </li>
+
+
+
                     <li className='px-2 ' > <Link to='/blog' className='px-4 max-md:px-5 border' >Blog</Link> </li>
-                    <li className='px-2 ' >
-                        <Link to='/' className='px-4 max-md:px-5 btn text-white border-0 bg-[#f88a6c]' > Emergency Admit</Link>
-                    </li>
+
+
 
                     <li>
 

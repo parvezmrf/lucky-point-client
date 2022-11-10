@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const SingleReview = ({ review, reviewDelete }) => {
@@ -26,7 +27,10 @@ const SingleReview = ({ review, reviewDelete }) => {
                     </div>
 
                     <div className="card-actions justify-end">
-                        <button className="btn btn-ghost">Edit</button>
+                        <Link to={`/updatereview/${_id}`} >
+                            <button className="btn btn-ghost">Edit</button>
+                        </Link>
+
                         <button onClick={() => reviewDelete(_id)} className="btn btn-ghost">Delete</button>
                     </div>
                 </div>

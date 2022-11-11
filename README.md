@@ -6,11 +6,11 @@ With this website you can admit for your any health issue. Visit this website an
 
 ## Feature
 
-● You can register with your google.
-● Search any topic
-● Add service
-● Comment your review
-● View other review
+### ● You can register with your google.
+### ● Search any topic
+### ● Add service
+### ● Comment your review
+### ● View other review
 
 You can try on live: https://lucky-point-8daf9.web.app/
 

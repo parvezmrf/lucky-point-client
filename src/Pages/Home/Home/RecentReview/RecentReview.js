@@ -9,11 +9,7 @@ const RecentReview = () => {
     return (
         <div className='my-10 grid grid-cols-3 max-md:grid-cols-1 gap-7 ' >
 
-
-
-
             <div className="card w-96 bg-base-100 drop-shadow-xl">
-
                 <div className="card-body">
                     <div className="card-actions items-center justify-between ">
                         <div className="card-actions items-center ">
@@ -37,8 +33,6 @@ const RecentReview = () => {
                     </div>
                 </div>
             </div>
-
-
 
             <div className="card w-96 bg-base-100 drop-shadow-xl">
 
@@ -65,8 +59,6 @@ const RecentReview = () => {
                     </div>
                 </div>
             </div>
-
-
 
             <div className="card w-96 bg-base-100 drop-shadow-xl">
 

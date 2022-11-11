@@ -145,7 +145,7 @@ const RecentReview = () => {
                     </div>
 
                     <div>
-                        <p>This practice is terrific. Dr. (Name) combines expertise and a willingness to listen and discuss. She’s also an excellent surgeon. Also, the staff is very friendly and professional. I’ve never had to wait more than a few minutes when I arrive on time for an appointment.</p>
+                        <p>This practice is terrific. Dr. Isabella combines expertise and a willingness to listen and discuss. She's also an excellent surgeon. Also, the staff is very friendly and professional. I've never had to wait more than a few minutes when I arrive on time for an appointment.</p>
                     </div>
                 </div>
             </div>

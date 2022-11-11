@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
 import Blog from '../../Pages/Home/Blog/Blog';
 import Home from '../../Pages/Home/Home/Home';
+import AddService from '../../Pages/Home/Services/AddService';
 import AllServices from '../../Pages/Home/Services/AllService';
 import ServiceDetails from '../../Pages/Home/Services/ServiceDetails';
 import Login from '../../Pages/Login/Login';
@@ -9,6 +10,7 @@ import NotFound from '../../Pages/NotFound/NotFound';
 import Register from '../../Pages/Register/Register';
 import Myreview from '../../Pages/ReviewPage/Myreview';
 import UpdateReview from '../../Pages/ReviewPage/UpdateReview';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allservices',
-                element: <AllServices></AllServices>
+                element: <PrivateRoute><AllServices></AllServices></PrivateRoute>
             },
             {
                 path: '/servicedetils/:id',
@@ -42,12 +44,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myreview',
-                element: <Myreview></Myreview>
+                element: <PrivateRoute><Myreview></Myreview></PrivateRoute>
             },
             {
                 path: '/updatereview/:id',
                 element: <UpdateReview></UpdateReview>,
                 loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+            },
+            {
+                path: '/addservice',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '*',

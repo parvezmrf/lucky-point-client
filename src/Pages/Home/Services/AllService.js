@@ -6,14 +6,13 @@ const AllServices = () => {
 
 
     useEffect(() => {
-        fetch('xata.json')
+        fetch('https://lucky-point-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
-
     return (
-        <div className='text-center'>
+        <div >
             <div className='py-10' >
                 <h2 className="text-4xl font-semibold text-primary ">All Available Services {services.length} </h2>
             </div>

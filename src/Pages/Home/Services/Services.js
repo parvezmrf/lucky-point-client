@@ -22,6 +22,7 @@ const Services = () => {
 
     return (
         <div >
+
             <div className='py-10 text-center' >
                 <h2 className="text-4xl font-semibold text-primary ">Our Service</h2>
                 <hr />

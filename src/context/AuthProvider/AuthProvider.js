@@ -21,9 +21,11 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-    // Logout user
 
+
+    // Logout user
     const logOutUser = () => {
+        localStorage.removeItem('lucky-token');
         signOut(auth)
             .then(() => {
                 // Sign-out successful.

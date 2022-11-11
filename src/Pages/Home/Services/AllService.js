@@ -5,6 +5,10 @@ import ServiceSigngle from './ServiceSigngle';
 const AllServices = () => {
     const [services, setServices] = useState([])
 
+    const spinner = isload => {
+
+    }
+
     useTitle('All service - Lucky Point')
 
 
@@ -14,8 +18,11 @@ const AllServices = () => {
             .then(data => setServices(data))
     }, [])
 
+
     return (
         <div >
+
+
             <div className='py-10' >
                 <h2 className="text-4xl font-semibold text-primary ">All Available Services {services.length} </h2>
             </div>

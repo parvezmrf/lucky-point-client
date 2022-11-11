@@ -31,7 +31,7 @@ const Navbar = () => {
 
         console.log(add)
 
-        fetch('https://lucky-point-server-parvezmrf.vercel.app/services', {
+        fetch('https://lucky-point-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

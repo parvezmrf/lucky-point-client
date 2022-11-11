@@ -41,7 +41,7 @@ const router = createBrowserRouter([
             {
                 path: '/servicedetils/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`https://lucky-point-server-parvezmrf.vercel.app/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://lucky-point-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myreview',
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
             {
                 path: '/updatereview/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({ params }) => fetch(`https://lucky-point-server-parvezmrf.vercel.app/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://lucky-point-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/servicedetils/:id',
                 element: <ForReview></ForReview>,
-                loader: ({ params }) => fetch(`https://lucky-point-server-parvezmrf.vercel.app/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://lucky-point-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/addservice',

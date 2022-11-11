@@ -9,7 +9,7 @@ const ForReview = () => {
 
 
     useEffect(() => {
-        fetch(`https://lucky-point-server-parvezmrf.vercel.app/reviews/`)
+        fetch(`https://lucky-point-server.vercel.app/reviews/`)
             .then(res => res.json()
                 .then(data => setRev(data)))
     }, [])

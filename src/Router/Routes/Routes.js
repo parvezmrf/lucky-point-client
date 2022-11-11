@@ -8,6 +8,7 @@ import ServiceDetails from '../../Pages/Home/Services/ServiceDetails';
 import Login from '../../Pages/Login/Login';
 import NotFound from '../../Pages/NotFound/NotFound';
 import Register from '../../Pages/Register/Register';
+import ForReview from '../../Pages/ReviewPage/ForReview';
 import Myreview from '../../Pages/ReviewPage/Myreview';
 import UpdateReview from '../../Pages/ReviewPage/UpdateReview';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allservices',
-                element: <PrivateRoute><AllServices></AllServices></PrivateRoute>
+                element: <AllServices></AllServices>
             },
             {
                 path: '/servicedetils/:id',
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
             {
                 path: '/updatereview/:id',
                 element: <UpdateReview></UpdateReview>,
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+            },
+            {
+                path: '/servicedetils/:id',
+                element: <ForReview></ForReview>,
                 loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
             },
             {

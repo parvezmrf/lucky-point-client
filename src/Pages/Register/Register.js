@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/loginlogo.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
@@ -7,6 +7,8 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
+
 
     const handleRegister = event => {
         event.preventDefault();
@@ -18,6 +20,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate('/')
             })
             .catch(error => console.error(error))
 

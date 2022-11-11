@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import ForReview from '../../ReviewPage/ForReview';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 
 const ServiceDetails = () => {
@@ -58,15 +61,21 @@ const ServiceDetails = () => {
 
                     <div className="card-body">
                         <h2 className="card-title text-3xl">{title}</h2>
-                        <img src={img} alt="Shoes" />
+
+
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                                <img src={img} alt="" />
+                            </PhotoView>
+                        </PhotoProvider>
+
+
                         <p className='text-xl' >{description}</p>
                         <p className='text-2xl my-3' >Treatment time: <strong>{duration} Months</strong> </p>
                         <p className='text-2xl my-3' >Customer Rating: <strong>{rating} </strong> out of 5 </p>
                         <p className='text-2xl my-3' >Price: <strong>${price} </strong>/Month</p>
 
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Admit Now</button>
-                        </div>
+
                     </div>
                 </div>
 
@@ -74,24 +83,32 @@ const ServiceDetails = () => {
             </>
 
 
+            {
 
-            <form onSubmit={handleReview} className='text-center'>
-                <input name='name' type="text" placeholder="Your Name" defaultValue={user?.displayName} className=" mx-6 input input-bordered input-success w-full max-w-md" required />
+                user?.uid ?
+                    <form onSubmit={handleReview} className='text-center'>
+                        <input name='name' type="text" placeholder="Your Name" defaultValue={user?.displayName} className=" mx-6 input input-bordered input-success w-full max-w-md" required />
 
-                <input name='email' type="email" placeholder="Your email" defaultValue={user?.email} disabled className="input input-bordered input-success w-full max-w-md" required /> <br />
-                <br />
+                        <input name='email' type="email" placeholder="Your email" defaultValue={user?.email} disabled className="input input-bordered input-success w-full max-w-md" required /> <br />
+                        <br />
 
-                <input name='phone' type="text" placeholder="Your contact number" className=" mx-6 input input-bordered input-success w-full max-w-md" required />
+                        <input name='phone' type="text" placeholder="Your contact number" className=" mx-6 input input-bordered input-success w-full max-w-md" required />
 
-                <input name='age' type="number" placeholder="Your age" className="input input-bordered input-success w-full max-w-md" required /> <br />
-                <br />
+                        <input name='age' type="number" placeholder="Your age" className="input input-bordered input-success w-full max-w-md" required /> <br />
+                        <br />
 
-                <textarea name='message' className="textarea textarea-success w-3/4 h-52" placeholder="Type your review" required></textarea>
-                <br />
+                        <textarea name='message' className="textarea textarea-success w-3/4 h-52" placeholder="Type your review" required></textarea>
+                        <br />
 
-                <input className="btn btn-success" type="submit" value="Send" />
+                        <input className="btn btn-success" type="submit" value="Send" />
 
-            </form>
+                    </form>
+                    : <h2 className='text-2xl text-center'>'You need to login for add review' <Link to='/login' > <button className='btn btn-primary'>Login Now.</button></Link></h2>
+            }
+
+
+            <ForReview></ForReview>
+
         </div>
     );
 };

@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="form-control">
 
                     <div className="w-96 flex ">
-                        <input type="text" placeholder="username@site.com" className="input input-bordered rounded-r-none pr-32" />
+                        <input type="text" placeholder="your contact email" className="input input-bordered rounded-r-none pr-32" />
                         <button className="btn btn-primary rounded-l-none">Subscribe</button>
                     </div>
                 </div>

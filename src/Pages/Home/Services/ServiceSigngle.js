@@ -1,4 +1,6 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 
 
@@ -11,7 +13,20 @@ const ServiceSigngle = ({ servicelist }) => {
     return (
 
         <div className="card lg:card-side bg-base-100 drop-shadow-xl m-5 p-5 ">
-            <figure ><img className='rounded-xl md:w-72' src={img} alt="Album" /></figure>
+            <figure className='w-64' >
+
+
+
+                <PhotoProvider>
+                    <PhotoView src={img}>
+                        <img src={img} alt="" />
+                    </PhotoView>
+                </PhotoProvider>
+
+
+
+
+            </figure>
             <div className="card-body md:w-1/2 ">
                 <h2 className="card-title">{title}</h2>
                 <p> {description.slice(0, 200) + '...'} </p>

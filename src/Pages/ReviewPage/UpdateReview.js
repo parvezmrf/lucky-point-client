@@ -33,19 +33,10 @@ const UpdateReview = () => {
     ////////////////
     return (
         <div>
-            update {storeReview.message}
 
 
             <form onSubmit={changeReview} className='text-center'>
-                <input name='name' type="text" placeholder="Your Name" defaultValue={user?.displayName} className=" mx-6 input input-bordered input-success w-full max-w-md" required />
 
-                <input name='email' type="email" placeholder="Your email" defaultValue={user?.email} disabled className="input input-bordered input-success w-full max-w-md" required /> <br />
-                <br />
-
-                <input name='phone' type="text" placeholder="Your contact number" className=" mx-6 input input-bordered input-success w-full max-w-md" required />
-
-                <input name='age' type="number" placeholder="Your age" className="input input-bordered input-success w-full max-w-md" required /> <br />
-                <br />
 
                 <textarea onChange={InputChange} name='message' defaultValue={storeReview?.message} className="textarea textarea-success w-3/4 h-52" placeholder="Type your review" required></textarea>
                 <br />

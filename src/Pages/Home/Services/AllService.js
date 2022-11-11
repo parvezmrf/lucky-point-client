@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import ServiceSigngle from './ServiceSigngle';
 
 const AllServices = () => {
     const [services, setServices] = useState([])
+
+    useTitle('All service - Lucky Point')
 
 
     useEffect(() => {

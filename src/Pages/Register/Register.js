@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/loginlogo.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 
@@ -9,6 +10,7 @@ const Register = () => {
     const { createUser } = useContext(AuthContext)
     const navigate = useNavigate()
 
+    useTitle('Register - Lucky Point')
 
     const handleRegister = event => {
         event.preventDefault();
@@ -53,7 +55,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" name='password' placeholder="password" className="input input-bordered" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
 
                         </div>
                         <div className="form-control mt-6">

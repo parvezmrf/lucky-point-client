@@ -4,12 +4,16 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import ForReview from '../../ReviewPage/ForReview';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../../hooks/useTitle';
 
 
 const ServiceDetails = () => {
 
     const { _id, title, img, description, duration, rating, price } = useLoaderData();
     const { user } = useContext(AuthContext);
+
+    useTitle('Service Details - Lucky Point')
+
 
     const handleReview = event => {
         event.preventDefault();

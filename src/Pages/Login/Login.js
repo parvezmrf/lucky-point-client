@@ -4,6 +4,7 @@ import logo from '../../assets/loginlogo.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 
 
@@ -13,6 +14,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'
+
+    useTitle('Login - Lucky Point')
 
     const handleLogin = event => {
         event.preventDefault();

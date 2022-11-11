@@ -1,19 +1,37 @@
 import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const UpdateReview = () => {
     const { user } = useContext(AuthContext)
     const storeReview = useLoaderData()
     const [review, setReview] = useState(storeReview)
-
+    const navigate = useNavigate()
 
     /////////////////
 
     const changeReview = event => {
         event.preventDefault();
+        alert('Updated')
+        navigate('/')
 
-        console.log(review)
+        // console.log(user);
+        // fetch(`http://localhost:5000/updatereview/${storeReview._id}`, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(user)
+
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         if (data.modifiedCount > 0) {
+        //             alert('User updated')
+        //             console.log(data)
+
+        //         }
+        //     })
 
     }
 

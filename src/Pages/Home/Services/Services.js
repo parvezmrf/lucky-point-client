@@ -3,7 +3,7 @@ import ServiceSigngle from './ServiceSigngle';
 
 const Services = () => {
     const [services, setServices] = useState([])
-
+    const [number, setNumber] = useState(3)
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -11,7 +11,7 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
 
-    const [number, setNumber] = useState(3)
+
 
     const showMore = (num) => {
         const more = num + 99;

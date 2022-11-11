@@ -35,7 +35,7 @@ const ServiceDetails = () => {
             message
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://lucky-point-server-parvezmrf.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

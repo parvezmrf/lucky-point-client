@@ -12,7 +12,7 @@ const Myreview = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://lucky-point-server-parvezmrf.vercel.app/reviews?email=${user?.email}`)
             .then(res => res.json()
                 .then(data => setReviews(data)))
     }, [user?.email])
@@ -20,7 +20,7 @@ const Myreview = () => {
     const reviewDelete = id => {
         const procced = window.confirm('Want to sure delete?');
         if (procced) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://lucky-point-server-parvezmrf.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

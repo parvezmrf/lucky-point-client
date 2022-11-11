@@ -16,7 +16,7 @@ const UpdateReview = () => {
         navigate('/')
 
         // console.log(user);
-        // fetch(`http://localhost:5000/updatereview/${storeReview._id}`, {
+        // fetch(`https://lucky-point-server-parvezmrf.vercel.app/updatereview/${storeReview._id}`, {
         //     method: 'PUT',
         //     headers: {
         //         'content-type': 'application/json'
